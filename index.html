@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <div class="main">
+        <svg>
+         <filter id="noise" x='0%' y='0%' width='100%' height='100%'>
+             <feTurbulence baseFrequency="0.02 0.03" result="NOISE" numOctaves="1" id="turbulence" />
+             <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="5"></feDisplacementMap>
+         </filter>
+     </svg>
+     <section id="premiere">
+     <div class="logo">
+         <h1>
+         <span>m</span>
+         <span>O</span>
+         <span>t</span>
+         <span>s</span>
+     </h1>
+     <div class="titre">
+     <h3>
+         UN
+     </h3>
+     <h3>
+         DICTIONNAIRE
+     </h3>
+     <h3>
+         - 2021
+     </h3>
+     <p class="dev">
+         I'MAWEBDEVELOPPERBASEDINNANTES       
+     </p>
+     <p class="dev">
+         STEPHNANGE@2020
+     </p>
+     <p class="gris" class="dev" >MONAMIELAROSE</p>
+    </div>
+     </div>
+     <div class="container">
+         <img src="images/rose3.jpg" alt="" class="pic"> 
+     </div>
+      <div class="scroll">
+    <p>scroll</p>
+      </div>
+     
+     </section>
+     <section class="space"></section>
+     <section id="second">
+         <div class="scroll2"><div class="crayon"></div></div>
+         <h1 class="h1Second">DICTIONNAIRE</h1>
+         <div class="dico">
+             <img src="images/dico.jpg" alt="" class="imgDico">
+             <h5>DEPLACE POUR VOIR</h5>
+         </div>
+         <footer>
+             <ul>
+             <li>Décembre 20</li>
+             <li>Synonyme</li>
+             <li>Définition</li>
+            </ul>
+         </footer>
+         <div class="left"></div>
+         <div class="right">
+    <header>
+        <i class="fas fa-bars"></i>
+    </header>
+</div>
+     </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>    
+     <script src="app.js"></script> 
+</body>
+</html>
