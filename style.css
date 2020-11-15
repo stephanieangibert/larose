@@ -39,6 +39,8 @@ img{
     left: 50%;
     transform: translate(-50%,-50%); */
     display: block;
+   
+  
 }
 .logo{
     margin-top: 50px;
@@ -140,11 +142,11 @@ header{
     height: 100vh;  
 }
 .h1Second{
-    position: absolute;
-    top: 30%;
-    left: 28%;
+    
     font-size: 600%;
     letter-spacing: 5px;
+    text-align: center;
+  
 }
 .dico{
     position: absolute;
@@ -152,13 +154,19 @@ header{
     left:50%;
     transform: translate(-50%,-50%);
     width: 320px;
-    height: 220px;
+    height: 213px; 
+    overflow: hidden;
+    background-color:#DBD7D7;
 
 }
-.imgDico:hover{
-    transform: rotate(15deg);
-    transition: 1s ease-in-out;
+.imgDico{
+    width: 320px;
+    height: 213px;
 }
+ .imgDico:hover{
+    transform: rotate(15deg);  
+    transition: 1s ease-in-out;
+ }
 h5{
     text-align: center;
     padding: 2px;
@@ -212,8 +220,59 @@ li{
 .spanOpac{
     color:black;
     position: absolute;
-    transition: 0.5s;
-    /* font-size: 12px; */
+    transition: 0.5s;  
     position: absolute;
-    transition: 0.5s;
+    /* transition: 0.5s; */
+    animation:disparait  infinite  forwards;
+    animation-duration: 3s;
+}
+.rotation{
+    animation:unPetitTour 3s ease-out forwards;
+}
+@keyframes unPetitTour{
+    0%{
+        transform: rotate(-90deg);
+        transform-origin: bottom right;
+    }
+    25%{
+        transform: rotate(-35deg);
+        transform-origin: bottom right;
+    }
+    50%{
+        transform: rotate(-20deg);
+        transform-origin: bottom right;
+    }
+    75%{
+        transform: rotate(-15deg);
+        transform-origin: bottom right;
+    }
+    100%{
+        transform: rotate(0deg);
+        transform-origin: bottom right;
+    }
+}
+@keyframes disparait{
+    0%{
+        opacity: 1;
+    }
+    25%{
+opacity: 0.75;
+    }
+    50%{
+        opacity: 0.50;
+    }
+    75%{
+        opacity: 0.25;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.titreCentre{
+    width: 100%;
+    height: 70px;  
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    
 }
