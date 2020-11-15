@@ -1,11 +1,14 @@
 let el =document.getElementById("turbulence");
 const h1=document.querySelector("h1");
-console.log(h1);
+// console.log(h1);
 const h3=document.querySelectorAll("h3");
 const dev=document.querySelectorAll(".dev");
 const gris=document.querySelectorAll(".gris");
 const image=document.getElementsByTagName("img");
 const second=document.getElementById("second");
+let scroll2=document.querySelector(".scroll2");
+
+
 
  const tl=gsap.timeline();
 
@@ -29,10 +32,14 @@ const second=document.getElementById("second");
         dev[1].style.transform="translateY("+value3+"px)";      
         gris[0].style.transform="translateY("+value3+"px)"; 
         image[0].style.transform="scale("+value4+")";
+      
+       
         tl     
-        // .to(image,{scale:1,ease:Power2.easeIn},1.7)     
-        .to(premiere,3,{opacity:1,ease:Power1.easeOut,duration:0.2},3)  
-        .to(second,{top:1000,left:0,position:"fixed",ease:Power1.easeOut,duration:0.1},3.5) 
+        .to(scroll2,{opacity:0},0)  
+        .to(tableauSpan,{opacity:0},0)
+        .to(premiere,{opacity:1,ease:Power1.easeOut,duration:2},2)  
+        .to(second,{top:1000,left:0,position:"fixed",ease:Power1.easeOut,duration:0.1},2.5) 
+     
     
     }
    else if(value>300 && value<600){
@@ -43,6 +50,9 @@ const second=document.getElementById("second");
         dev[0].style.transform="translateY("+value3+"px)";
         dev[1].style.transform="translateY("+value3+"px)";      
         gris[0].style.transform="translateY("+value3+"px)";
+        tl
+        .to(scroll2,{opacity:0})
+        .to(tableauSpan,{opacity:0})
 //        console.log(value2);
 //    tl
 //    .to(image,{scale:1.6,ease:Power1.easeIn},1.7)
@@ -50,21 +60,21 @@ const second=document.getElementById("second");
    }
    else if(value>601){
        tl
-       .to(premiere,3,{opacity:0,ease:Power1.easeOut,duration:0.2},3)  
-       .to(second,{top:0,left:0,position:"fixed",ease:Power1.easeOut},3.5) 
-       .to(second,{opacity:1,ease:Power1.easeOut,duration:-1},4)
+       .to(premiere,{opacity:0.5,ease:Power1.easeOut,duration:1},1)          
+       .to(second,{top:0,left:0,position:"fixed",ease:Power1.easeOut},2.5) 
+       .to(second,{opacity:0.5,ease:Power1.easeOut,duration:0.5},3)
+       .to(second,{opacity:1,ease:Power1.easeOut,duration:0.5},3.5)
+       
    }
  })
 
- let scroll2=document.querySelector(".scroll2");
- let crayon=document.querySelector(".crayon");
+ 
 
 document.addEventListener("mousemove",function(e){
-    scroll2.style.cssText="left: "+e.clientX+"px; top: "+e.clientY+"px";
-    console.log(e.clientX);
+    scroll2.style.cssText="left: "+(e.clientX-100)+"px; top: "+(e.clientY-100)+"px";
+    // console.log(e.clientX);
     let value4=e.clientX*0.2;
    
-     crayon.style.transform="rotate("+value4+"deg)";
     
   
 })

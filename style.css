@@ -11,8 +11,11 @@
     flex-direction: row;
     background-color:#160000;
      position: fixed; 
+ 
 
 }
+
+
 svg{
     position: absolute;
     width: 0;
@@ -185,20 +188,32 @@ li{
     height: 200px;
     border:dashed grey 2px;
     border-radius: 50%;
-    position:fixed;
+    position: absolute;
+    text-align: center;
     top:0;
     left: 0;
     transition: 0.1s;
     display: flex;
-    flex-direction: center;
+    flex-direction:column;
+    justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-.crayon{
-    width: 100px;
-    height: 2px;
-    position: absolute;    
-    background-color:black;
+ .crayon{
+    width: 199px;
+    height: 199px;
+    position: absolute;
+    color:black;
     top: 50%;
     left:20%;
+    
  
+} 
+.spanOpac{
+    color:black;
+    position: absolute;
+    transition: 0.5s;
+    /* font-size: 12px; */
+    position: absolute;
+    transition: 0.5s;
 }
