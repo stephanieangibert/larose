@@ -44,8 +44,8 @@ document.addEventListener('mousemove',(e)=>{
 
 let imageCentrale=document.querySelector('.imgDico');
 let titreH1=document.querySelector(".h1Second");
-const tableauPhoto=["images/dico.jpg","images/marguerite.jpg","images/woodtype.jpg"];
-const tableauH1=["DICTIONNAIRE","MARGUERITE","WOODTYPE"];
+const tableauPhoto=["images/dico.jpg","images/marguerite.jpg","images/woodtype.jpg","images/incunable.jpg","images/focus.jpg","images/captatio.png"];
+const tableauH1=["DICTIONNAIRE","MARGUERITE","WOODTYPE","INCUNABLE","FOCUS","CAPTATIO BENEVOLENTIAE"];
 
 let j=0;
 scroll2.addEventListener("click",()=>{

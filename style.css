@@ -206,6 +206,7 @@ li{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 5000;
 }
  .crayon{
     width: 199px;
@@ -222,8 +223,8 @@ li{
     position: absolute;
     transition: 0.5s;  
     position: absolute;
-    /* transition: 0.5s; */
-    animation:disparait  infinite  forwards;
+     transition: 0.5s; 
+    animation:disparait  infinite linear forwards;
     animation-duration: 3s;
 }
 .rotation{
