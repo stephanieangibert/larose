@@ -1,6 +1,5 @@
 let el =document.getElementById("turbulence");
 const h1=document.querySelector("h1");
-// console.log(h1);
 const h3=document.querySelectorAll("h3");
 const dev=document.querySelectorAll(".dev");
 const gris=document.querySelectorAll(".gris");
@@ -21,8 +20,7 @@ let scroll2=document.querySelector(".scroll2");
     let value2=window.scrollY*0.5;
     let value3=window.scrollY*0.15;
     let value4=window.scrollY*0.001+1;
-    // console.log(value4);
-    // console.log(value);
+
     if(value<300){
         h1.style.transform="translateY("+value2+"px)";  
         h3[0].style.transform="translateY("+value3+"px)";
@@ -53,9 +51,7 @@ let scroll2=document.querySelector(".scroll2");
         tl
         .to(scroll2,{opacity:0})
         .to(tableauSpan,{opacity:0})
-//        console.log(value2);
-//    tl
-//    .to(image,{scale:1.6,ease:Power1.easeIn},1.7)
+
 
    }
    else if(value>601){
@@ -69,12 +65,19 @@ let scroll2=document.querySelector(".scroll2");
  })
 
  
+if(innerHeight>812){
+    document.addEventListener("mousemove",function(e){
+        scroll2.style.cssText="left: "+(e.clientX-100)+"px; top: "+(e.clientY-100)+"px"; 
+        let value4=e.clientX*0.2;   
+      
+    })
+}else{
+    document.addEventListener("mousemove",function(e){
+        scroll2.style.cssText="left: "+(e.clientX-50)+"px; top: "+(e.clientY-50)+"px"; 
+        let value4=e.clientX*0.2;   
+      
+    })
+}
 
-document.addEventListener("mousemove",function(e){
-    scroll2.style.cssText="left: "+(e.clientX-100)+"px; top: "+(e.clientY-100)+"px";
-    // console.log(e.clientX);
-    let value4=e.clientX*0.2;
-   
-    
-  
-})
+
+console.log(innerWidth);
